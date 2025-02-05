@@ -86,6 +86,11 @@ Sessionx.vim
 .history/
 .ionide
 
+# Shopify
+/extensions/*/dist
+.shopify/*
+.shopify.lock
+
 # OS Generated
 .DS_Store
 .AppleDouble
