@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "48374cda741cd98fb2f821ec091941d7"
-application_url = "https://example.com/"
+application_url = "https://ethiopia-vitamins-hungarian-advised.trycloudflare.com"
 embedded = true
 name = "PowerPact"
 handle = "powerpact"
@@ -22,7 +22,15 @@ api_version = "2025-01"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://ethiopia-vitamins-hungarian-advised.trycloudflare.com/auth/callback",
+  "https://ethiopia-vitamins-hungarian-advised.trycloudflare.com/auth/shopify/callback",
+  "https://ethiopia-vitamins-hungarian-advised.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "keyboards-and-such.myshopify.com"
+automatically_update_urls_on_dev = true
