@@ -1,7 +1,9 @@
-import { test, expect } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
-test('renders without crashing', () => {
-  render(<div>Test Component</div>);
-  expect(screen.getByText('Test Component')).toBeInTheDocument();
+describe('Sample Component', () => {
+  it('should render hello world', () => {
+    render(<div>Hello World</div>);
+    expect(screen.getByText('Hello World')).toBeInTheDocument();
+  });
 });

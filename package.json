@@ -16,7 +16,10 @@
     "shopify": "shopify",
     "prisma": "prisma",
     "graphql-codegen": "graphql-codegen",
-    "vite": "vite"
+    "vite": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage"
   },
   "type": "module",
   "engines": {
@@ -43,6 +46,7 @@
     "@remix-run/eslint-config": "^2.15.3",
     "@remix-run/route-config": "^2.15.0",
     "@shopify/api-codegen-preset": "^1.1.1",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
@@ -52,6 +56,7 @@
     "@types/react-dom": "^18.2.14",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.0.1",
+    "jsdom": "^26.0.0",
     "prettier": "^3.4.2",
     "typescript": "^5.2.2",
     "vite": "^5.1.3",
