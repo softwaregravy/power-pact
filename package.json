@@ -23,7 +23,9 @@
     "pretest": "dotenv -e .env.test pnpm test:db:reset",
     "test": "dotenv -e .env.test vitest run",
     "test:watch": "dotenv -e .env.test vitest watch",
-    "test:coverage": "dotenv -e .env.test vitest run --coverage"
+    "test:coverage": "dotenv -e .env.test vitest run --coverage",
+    "deploy:build": "pnpm install && pnpm run setup && pnpm run build",
+    "deploy:start": "pnpm run start"
   },
   "type": "module",
   "engines": {
