@@ -23,13 +23,13 @@ export const loader: LoaderFunction = async () => {
 
   try {
     // Test Redis connection using BullMQ
+    console.log("REDIS_URL is ", process.env.REDIS_URL)
     const healthQueue = new Queue("health-check", {
-      connection: {
-        pingInterval: 1000
-      }
+      connection: { url: process.env.REDIS_URL }
     });
     await healthQueue.disconnect();
   } catch (error) {
+    console.error("Connection to REDIS failed", error);
     health.status = "unhealthy";
     health.checks.redis = false;
   }
