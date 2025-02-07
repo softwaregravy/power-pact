@@ -17,9 +17,13 @@
     "prisma": "prisma",
     "graphql-codegen": "graphql-codegen",
     "vite": "vite",
-    "test": "vitest run",
-    "test:watch": "vitest watch",
-    "test:coverage": "vitest run --coverage"
+    "test:db:create": "NODE_ENV=test dotenv -e .env.test createdb power_pact_test || true",
+    "test:db:migrate": "NODE_ENV=test dotenv -e .env.test prisma migrate deploy",
+    "test:db:reset": "pnpm test:db:create && pnpm test:db:migrate",
+    "pretest": "dotenv -e .env.test pnpm test:db:reset",
+    "test": "dotenv -e .env.test vitest run",
+    "test:watch": "dotenv -e .env.test vitest watch",
+    "test:coverage": "dotenv -e .env.test vitest run --coverage"
   },
   "type": "module",
   "engines": {

@@ -19,3 +19,5 @@ Third, suggest the next step to work on.
 The user will accept or suggest a different step.
 
 Proceed to complete the task
+
+When completing tasks follow directions from IMPLEMENTATION_NOTES

@@ -9,6 +9,9 @@ export default defineConfig({
     coverage: {
       reporter: ['text', 'json', 'html'],
       exclude: ['node_modules/', 'tests/setup.ts']
+    },
+    env: {
+      NODE_ENV: 'test'
     }
   }
 });

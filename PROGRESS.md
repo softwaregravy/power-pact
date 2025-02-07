@@ -85,3 +85,43 @@
 ## Likely Next Steps
 - Complete Database Setup by adding connection tests
 - Move on to Queue Setup with Redis and Bull
+
+# Progress on 2/7/2025
+
+## Phase 1 Task Status
+- [x] Install Express Generator TS (via Shopify CLI)
+- [x] Generate base project structure (via Shopify CLI)
+- [x] Add TypeScript config (via Shopify CLI)
+- [x] Add test directory structure
+- [x] Create first passing test
+- [x] Add ESLint and Prettier
+- [x] Success Criteria: Server returns "Hello World" on / with passing test
+- [x] Install Prisma
+- [x] Set up PostgreSQL locally using Postgres.app
+- [x] Create initial schema with PartnerStore model
+- [x] Add database URL to env
+- [x] Generate Prisma client
+- [x] Write basic DB connection test
+- [x] Success Criteria: Test connects to DB and creates/reads a PartnerStore
+
+## Implementation Notes
+- Used Shopify CLI with Remix template instead of Express
+- Test structure follows convention: tests/{unit,integration}/{components,models,routes,utils}
+- Using Vitest + JSDOM for testing
+- Added setup.ts for test environment configuration
+- Configured separate test database environment
+- Added PartnerStore model integration test
+
+## Skipped Tasks
+None - all planned tasks were completed
+
+## Emergent Tasks
+- [ ] Add model validations
+- [ ] Add database seed data
+- [ ] Configure test database cleanup
+- [ ] Add model factories for testing
+
+## Likely Next Steps
+- Begin Queue Setup with Redis and Bull
+- Project Initialization and Database Setup are complete
+- First two sections of Phase 1 are done
