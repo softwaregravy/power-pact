@@ -23,7 +23,6 @@ export const loader: LoaderFunction = async () => {
 
   try {
     // Test Redis connection using BullMQ
-    console.log("REDIS_URL is ", process.env.REDIS_URL)
     const healthQueue = new Queue("health-check", {
       connection: { url: process.env.REDIS_URL }
     });
