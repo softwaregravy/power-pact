@@ -1,9 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { productMapFactory } from '../../factories';
 
 describe('ProductMap Factory', () => {
   it('creates a ProductMap', async () => {
-    const productMap = await productMapFactory.build();
+    const productMap = await factories.productMapFactory.build();
     
     expect(productMap).toHaveProperty('bubbly_product_id');
     expect(productMap).toHaveProperty('partner_shop_domain');
