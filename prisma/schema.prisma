@@ -45,3 +45,20 @@ model Session {
   @@index([expires])
   @@map("sessions")
 }
+
+
+model ProductMap {
+  id                  String   @id @default(cuid())
+  bubbly_product_id   String
+  partner_shop_domain String
+  partner_product_id  String
+  bubbly_variant_id   String
+  partner_variant_id  String
+  created_at          DateTime @default(now())
+  updated_at          DateTime @updatedAt
+
+  @@unique([bubbly_product_id, partner_shop_domain, partner_product_id, partner_variant_id])
+  @@index([partner_shop_domain])
+  @@index([bubbly_product_id])
+  @@index([partner_product_id])
+}
